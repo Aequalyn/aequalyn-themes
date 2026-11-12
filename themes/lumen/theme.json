@@ -1,0 +1,21 @@
+{
+  "name": "Lumen",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "palette": {
+    "bgBase": "#12141f",
+    "bgSurface": "#1b1e2c",
+    "bgHover": "#222637",
+    "bgSelected": "#2c3146",
+    "bgBorder": "#33384d",
+    "textPrimary": "#ece6d6",
+    "textSecondary": "#c4bda9",
+    "textMuted": "#7b7a86",
+    "accentPrimary": "#e8b964",
+    "accentCyan": "#86c5c9",
+    "accentGreen": "#a6c48a",
+    "accentOrange": "#f09a5b",
+    "accentRed": "#e5737a"
+  }
+}
