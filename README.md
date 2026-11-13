@@ -23,11 +23,11 @@ accentOrange accentRed`.
 Leave `palette` out and the theme is a **pack**: it brings backgrounds and
 the colours come from whichever background is showing.
 
-Omarchy themes work unchanged: a `colors.toml` (accent, foreground,
+Folder themes work unchanged: a `colors.toml` (accent, foreground,
 background, color0–15) is mapped onto the palette.
 
 ```sh
-aequalyn-themes install https://github.com/<user>/omarchy-<name>-theme
+aequalyn-themes install <git-url>
 aequalyn-themes set <id>
 ```
 
