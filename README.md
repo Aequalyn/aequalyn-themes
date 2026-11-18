@@ -21,6 +21,12 @@ so the time-of-day wallpaper mode finds them) and a 1080p live loop.
 | ![](themes/cosmos-day/preview.jpg) **Cosmos Day** | ![](themes/canopy-day/preview.jpg) **Canopy Day** | ![](themes/abyss-day/preview.jpg) **Abyss Day** | ![](themes/summit-day/preview.jpg) **Summit Day** |
 | ![](themes/dune-day/preview.jpg) **Dune Day** | ![](themes/polar-day/preview.jpg) **Polar Day** | ![](themes/metro-day/preview.jpg) **Metro Day** | ![](themes/flux-day/preview.jpg) **Flux Day** |
 
+## Ported
+
+| |
+| --- |
+| ![](themes/spectral/preview.jpg) **Spectral** by qempexe · the full neon spectrum on a near-black base, six 4K stills and two live loops |
+
 `wallpapers/` holds wallpapers of their own, not part of any theme: stills at 4K and
 two live loops. They show in every wallpaper picker.
 
@@ -43,7 +49,9 @@ themes/<id>/
 
 `palette` uses the shell's keys: `bgBase bgSurface bgHover bgSelected bgBorder
 textPrimary textSecondary textMuted accentPrimary accentCyan accentGreen
-accentOrange accentRed`.
+accentOrange accentRed`. It may also carry `borderColors`, two or more colours the
+window borders run through (Spectral's six-colour gradient); without it they run from
+`accentPrimary` to `accentCyan`.
 
 Leave `palette` out and the theme is a **pack**: it brings backgrounds and
 the colours come from whichever background is showing.
