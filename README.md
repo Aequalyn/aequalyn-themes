@@ -9,7 +9,7 @@ Themes for Aequalyn. Each theme is a palette plus backgrounds that belong to it.
 
 ## Drawn here
 
-Eight topics, each a dark theme and a light one ("Day"), drawn by
+Nine topics, each a dark theme and a light one ("Day"), drawn by
 `tools/artgen.py` from one to four colours: the colours make the palette and every
 picture of the theme. Each theme has two 4K stills (night and dusk, or day and dawn,
 so the time-of-day wallpaper mode finds them) and a 1080p live loop.
@@ -20,6 +20,14 @@ so the time-of-day wallpaper mode finds them) and a 1080p live loop.
 | ![](themes/dune/preview.jpg) **Dune** · 3 | ![](themes/polar/preview.jpg) **Polar** · 3 | ![](themes/metro/preview.jpg) **Metro** · 2 | ![](themes/flux/preview.jpg) **Flux** · 4 |
 | ![](themes/cosmos-day/preview.jpg) **Cosmos Day** | ![](themes/canopy-day/preview.jpg) **Canopy Day** | ![](themes/abyss-day/preview.jpg) **Abyss Day** | ![](themes/summit-day/preview.jpg) **Summit Day** |
 | ![](themes/dune-day/preview.jpg) **Dune Day** | ![](themes/polar-day/preview.jpg) **Polar Day** | ![](themes/metro-day/preview.jpg) **Metro Day** | ![](themes/flux-day/preview.jpg) **Flux Day** |
+
+**Aequalyn** and **Aequalyn Day** carry the Aequalyn mark (night and day, and the live
+loops) or its name (dusk and dawn), never both, from `tools/brand/`, in the project's own
+teal, over soft light, ripples and flowing ribbons.
+
+| | |
+| --- | --- |
+| ![](themes/aequalyn/preview.jpg) **Aequalyn** · 3 colours | ![](themes/aequalyn-day/preview.jpg) **Aequalyn Day** |
 
 ## Ported
 

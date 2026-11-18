@@ -1,0 +1,27 @@
+{
+  "name": "Aequalyn Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in its own teal, with soft light and slow ripples.",
+  "colors": [
+    "#24434a",
+    "#4fc1b0",
+    "#6fb7d8"
+  ],
+  "palette": {
+    "bgBase": "#f0f6f7",
+    "bgSurface": "#e6eff2",
+    "bgHover": "#dce9ec",
+    "bgSelected": "#c8dfe4",
+    "bgBorder": "#c6d8dd",
+    "textPrimary": "#1d2027",
+    "textSecondary": "#4d5156",
+    "textMuted": "#81868a",
+    "accentPrimary": "#2a766b",
+    "accentCyan": "#297699",
+    "accentGreen": "#5b762a",
+    "accentOrange": "#217955",
+    "accentRed": "#c8323e"
+  }
+}
