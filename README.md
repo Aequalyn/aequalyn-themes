@@ -7,11 +7,36 @@ Themes for Aequalyn. Each theme is a palette plus backgrounds that belong to it.
 | ![](themes/lumen/preview.jpg) **Lumen** | ![](themes/basalt/preview.jpg) **Basalt** | ![](themes/ember/preview.jpg) **Ember** |
 | ![](themes/tidal/preview.jpg) **Tidal** | ![](themes/meadow/preview.jpg) **Meadow** (light) | ![](themes/nocturne/preview.jpg) **Nocturne** (pack) |
 
+## Drawn here
+
+Eight topics, each a dark theme and a light one ("Day"), drawn by
+`tools/artgen.py` from one to four colours: the colours make the palette and every
+picture of the theme. Each theme has two 4K stills (night and dusk, or day and dawn,
+so the time-of-day wallpaper mode finds them) and a 1080p live loop.
+
+| | | | |
+| --- | --- | --- | --- |
+| ![](themes/cosmos/preview.jpg) **Cosmos** · 4 colours | ![](themes/canopy/preview.jpg) **Canopy** · 2 | ![](themes/abyss/preview.jpg) **Abyss** · 2 | ![](themes/summit/preview.jpg) **Summit** · 1 |
+| ![](themes/dune/preview.jpg) **Dune** · 3 | ![](themes/polar/preview.jpg) **Polar** · 3 | ![](themes/metro/preview.jpg) **Metro** · 2 | ![](themes/flux/preview.jpg) **Flux** · 4 |
+| ![](themes/cosmos-day/preview.jpg) **Cosmos Day** | ![](themes/canopy-day/preview.jpg) **Canopy Day** | ![](themes/abyss-day/preview.jpg) **Abyss Day** | ![](themes/summit-day/preview.jpg) **Summit Day** |
+| ![](themes/dune-day/preview.jpg) **Dune Day** | ![](themes/polar-day/preview.jpg) **Polar Day** | ![](themes/metro-day/preview.jpg) **Metro Day** | ![](themes/flux-day/preview.jpg) **Flux Day** |
+
+`wallpapers/` holds wallpapers of their own, not part of any theme: stills at 4K and
+two live loops. They show in every wallpaper picker.
+
+```sh
+python3 tools/artgen.py all            # every theme and wallpaper (needs resvg, magick, ffmpeg)
+python3 tools/artgen.py theme cosmos   # one topic, dark and light
+python3 tools/artgen.py walls          # the wallpapers of their own
+```
+
+Live wallpapers move with `mpvpaper`; without it they show as a still.
+
 ## Format
 
 ```
 themes/<id>/
-├── theme.json      name, family, author, variant, palette
+├── theme.json      name, family, author, variant, palette (and, for drawn ones, about, colors)
 ├── backgrounds/    images or videos, used in name order
 └── preview.jpg     card image in Atelier (optional; defaults to the first background)
 ```
@@ -32,3 +57,4 @@ aequalyn-themes set <id>
 ```
 
 User themes go in `~/.config/aequalyn/themes/` and override shipped ones with the same id.
+The wallpapers of their own are installed to `~/.local/share/aequalyn/wallpapers/`.
