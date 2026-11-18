@@ -2,7 +2,8 @@
 """artgen: Aequalyn's own themes and wallpapers, drawn from a handful of colours.
 
 Every picture is composed here as layered SVG (sky, glow, stars, nebulae, ridges,
-trees, waves, dunes, aurora, city, flowing ribbons) from one to four seed colours, so
+trees, waves, dunes, aurora, city, flowing ribbons, the Aequalyn mark and name from
+tools/brand/) from one to four seed colours, so
 the themes, their palettes and their wallpapers all come from the same colours.
 
   stills  rendered at 3840x2160 with resvg, then given a fine film grain
@@ -127,6 +128,8 @@ TOPICS = {
               "about": "A city skyline, its windows lit warm against a blue hour."},
     "flux": {"name": "Flux", "keys": ["#ff6b6b", "#ffd166", "#18d1a0", "#4d96ff"], "scene": "flow",
              "about": "Four colours flowing into each other: ribbons and soft light."},
+    "aequalyn": {"name": "Aequalyn", "keys": ["#24434a", "#4fc1b0", "#6fb7d8"], "scene": "brand",
+                 "about": "The Aequalyn mark, or its name, in its own teal, with soft light and slow ripples."},
 }
 
 # standalone wallpapers: not part of any theme
@@ -595,8 +598,139 @@ def scene_flow(keys, mood, seed, w, h):
     return layers
 
 
+# ---- the brand: the Aequalyn mark and name -----------------------------------------------
+# tools/brand/: the æ mark (strokes, as the shell's ae-mark.svg) and the wordmark (one path)
+
+BRAND = os.path.join(os.path.dirname(os.path.abspath(__file__)), "brand")
+MARK_BOX = (100, 130, 320, 200)        # the mark's viewBox: x, y, width, height
+MARK_RING = (188.8, 225.3, 64)         # the round of its "a": centre (after its 20.5 shift), radius
+
+
+def mark_svg(cx, cy, height, color):
+    """the æ mark, `height` tall, centred on (cx, cy)"""
+    x0, y0, mw, mh = MARK_BOX
+    k = height / mh
+    tx, ty = cx - (x0 + mw / 2) * k, cy - (y0 + mh / 2) * k
+    return ('<g transform="translate(%.2f %.2f) scale(%.5f)"><g transform="translate(0 20.5)" fill="none" stroke="%s" stroke-width="29.7">'
+            '<circle cx="188.8" cy="204.8" r="64"/><path d="M252.8 204.8v78.8" stroke-linecap="butt"/>'
+            '<path d="M380.8 204.8A64 64 0 1 0 365.8 245.9" stroke-linecap="round"/><path d="M252.8 204.8h128"/></g></g>'
+            % (tx, ty, k, color))
+
+
+def mark_ring(cx, cy, height):
+    """where the round of the mark's "a" lands, and its radius, for the mark drawn so"""
+    x0, y0, mw, mh = MARK_BOX
+    k = height / mh
+    rx, ry, r = MARK_RING
+    return cx + (rx - x0 - mw / 2) * k, cy + (ry - y0 - mh / 2) * k, r * k
+
+
+_WORD = None
+
+
+def word_svg(cx, cy, width, color):
+    """the wordmark, `width` wide, centred on (cx, cy)"""
+    global _WORD
+    if _WORD is None:
+        import re
+        src = open(os.path.join(BRAND, "aequalyn-wordmark.svg")).read()
+        m = re.search(r'<path transform="translate\(([^)]*)\)" d="([^"]+)"', src)
+        _WORD = (m.group(1), m.group(2))
+    tr, d = _WORD
+    k = width / 728
+    return ('<g transform="translate(%.2f %.2f) scale(%.5f)"><path transform="translate(%s)" d="%s" fill="%s"/></g>'
+            % (cx - 364 * k, cy - 89.5 * k, k, tr, d, color))
+
+
+def scene_brand(keys, mood, seed, w, h):
+    rng = random.Random(seed)
+    c1, acc = keys[0], keys[1]
+    c3 = keys[2] if len(keys) > 2 else shift(acc, 0.1, 0, 0)
+    night = dark(mood)
+    # one of the two on each picture, never both: the mark on the main picture (night,
+    # day, and the live loops), the name on the second (dusk, dawn); in the middle, a
+    # little above it (clear of the ribbons, and of a dock at the bottom)
+    with_mark = mood in ("night", "day")
+    cx, cy = w * 0.5, h * 0.46
+    mh = h * 0.34                       # the mark's height
+    ww = w * 0.46                       # the name's width
+    ink = "#f3f6f3" if night else "#142a30"
+    name_ink = mix(acc, "#ffffff", 0.45) if night else "#24434a"
+    if with_mark:
+        rcx, rcy, rr = mark_ring(cx, cy, mh)
+        def logo_of(color):
+            return mark_svg(cx, cy, mh, color)
+    else:
+        # the ripples from the middle of the name
+        rcx, rcy, rr = cx, cy, ww * 0.11
+        def logo_of(color):
+            return word_svg(cx, cy, ww, color)
+
+    # the ground: deep teal near black, or a light teal-tinted white; dusk and dawn warmer
+    s0 = Svg(w, h)
+    if mood == "night":
+        sky = [(0, mix(c1, "#03070a", 0.80), 1), (1, mix(c1, "#010304", 0.90), 1)]
+    elif mood == "dusk":
+        sky = [(0, mix(c1, "#04080c", 0.78), 1), (0.7, mix(c1, "#0b0d14", 0.70), 1), (1, mix(acc, "#3a2430", 0.75), 1)]
+    elif mood == "day":
+        sky = [(0, mix(c1, "#f8fbfa", 0.94), 1), (1, mix(acc, "#ffffff", 0.84), 1)]
+    else:
+        sky = [(0, mix(c1, "#fbf8f4", 0.93), 1), (1, mix("#ffd9bf", "#ffffff", 0.55), 1)]
+    s0.add('<rect width="%d" height="%d" fill="%s"/>' % (w, h, s0.lin(sky)))
+    vig = s0.rad([(0, "#000000", 0), (0.65, "#000000", 0), (1, "#000000", 0.45 if night else 0.08)], 0.5, 0.5, 0.75)
+    s0.add('<rect width="%d" height="%d" fill="%s"/>' % (w, h, vig))
+    layers = [("base", s0.text(), {})]
+
+    # soft light in the theme's colours, drifting
+    glow = Svg(w, h)
+    bl = glow.blur(h * 0.10)
+    spots = [(rcx, rcy, h * 0.42, acc), (w * rng.uniform(0.1, 0.3), h * rng.uniform(0.6, 0.9), h * 0.40, c3),
+             (w * rng.uniform(0.7, 0.92), h * rng.uniform(0.1, 0.35), h * 0.36, mix(acc, c3, 0.5))]
+    for x, y, r, c in spots:
+        glow.add('<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s" opacity="%.2f" filter="%s"/>'
+                 % (x, y, r, c, 0.30 if night else 0.22, bl))
+    layers.append(("glow", glow.text(), {"sway": 36, "period": 12, "pulse": 0.18}))
+
+    # ripples from the round of the "a": two sets between each other, crossfading over the
+    # loop, so they seem to breathe outwards
+    for j in range(2):
+        rings = Svg(w, h)
+        step = rr * 0.62
+        for i in range(1, 15):
+            r = rr + step * (i + 0.5 * j)
+            fade = max(0.0, 1 - i / 14)
+            rings.add('<circle cx="%.1f" cy="%.1f" r="%.1f" fill="none" stroke="%s" stroke-width="%.1f" opacity="%.3f"/>'
+                      % (rcx, rcy, r, acc if night else c1, h * 0.0016, (0.30 if night else 0.20) * fade))
+        layers.append(("rings%d" % j, rings.text(), {"cross": j}))
+
+    # ribbons along the bottom, flowing
+    for j in range(2):
+        rib = Svg(w, h)
+        for i in range(6):
+            t = i / 5
+            f = ridge(rng, w, h * (0.80 + 0.10 * t), h * 0.06, 3, 0.8)
+            col = rib.lin([(0, acc, 0.0), (0.35, acc if i % 2 else c3, 0.8), (0.7, c3 if i % 2 else acc, 0.8), (1, c3, 0.0)], 0, 0, 1, 0)
+            d = " ".join("%s%.1f,%.1f" % ("M" if x == -20 else "L", x, f(x)) for x in range(-20, w + 21, 10))
+            rib.add('<path d="%s" fill="none" stroke="%s" stroke-width="%.1f" stroke-linecap="round" opacity="%.2f"/>'
+                    % (d, col, h * rng.uniform(0.0015, 0.005), 0.55 if night else 0.42))
+        layers.append(("ribbons%d" % j, rib.text(), {"sway": 34 + 20 * j, "period": 12, "phase": 0.5 * j, "cross": j}))
+
+    # a halo behind it, breathing
+    halo = Svg(w, h)
+    hb = halo.blur(h * 0.035)
+    halo.add('<g opacity="%.2f" filter="%s">%s</g>' % (0.75 if night else 0.35, hb, logo_of(acc)))
+    layers.append(("halo", halo.text(), {"pulse": 0.45, "period": 6}))
+
+    # the mark or the name, still
+    logo = Svg(w, h)
+    logo.add(logo_of(ink if with_mark else name_ink))
+    layers.append(("logo", logo.text(), {}))
+    return layers
+
+
 SCENES = {"cosmos": scene_cosmos, "forest": scene_forest, "ocean": scene_ocean, "peaks": scene_peaks,
-          "desert": scene_desert, "aurora": scene_aurora, "city": scene_city, "flow": scene_flow}
+          "desert": scene_desert, "aurora": scene_aurora, "city": scene_city, "flow": scene_flow,
+          "brand": scene_brand}
 
 # ---- rendering -------------------------------------------------------------------------------
 
@@ -718,7 +852,7 @@ def write_meta(tid):
         d = os.path.join(ROOT, "themes", tid if variant == "dark" else tid + "-day")
         meta = {
             "name": t["name"] + ("" if variant == "dark" else " Day"),
-            "family": "Aequalyn Nature" if t["scene"] not in ("flow", "city") else "Aequalyn",
+            "family": "Aequalyn Nature" if t["scene"] not in ("flow", "city", "brand") else "Aequalyn",
             "author": "Aequalyn",
             "variant": variant,
             "about": t["about"],
