@@ -1,0 +1,26 @@
+{
+  "name": "Metro Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "A city skyline, its windows lit warm against a blue hour.",
+  "colors": [
+    "#f2b544",
+    "#3d6ff0"
+  ],
+  "palette": {
+    "bgBase": "#f7f5f0",
+    "bgSurface": "#f2eee6",
+    "bgHover": "#ece7dc",
+    "bgSelected": "#e6dbc7",
+    "bgBorder": "#ddd5c6",
+    "textPrimary": "#362d26",
+    "textSecondary": "#56504a",
+    "textMuted": "#8c8780",
+    "accentPrimary": "#2a61ef",
+    "accentCyan": "#af510e",
+    "accentGreen": "#0a8024",
+    "accentOrange": "#7150f6",
+    "accentRed": "#c8323e"
+  }
+}
