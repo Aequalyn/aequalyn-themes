@@ -14,6 +14,7 @@ the themes, their palettes and their wallpapers all come from the same colours.
   python3 tools/artgen.py all              everything, into themes/ and wallpapers/
   python3 tools/artgen.py theme cosmos     one topic (its dark and light themes)
   python3 tools/artgen.py walls            the standalone wallpapers
+  python3 tools/artgen.py live aequalyn     only a topic's live loops (its stills stay)
   python3 tools/artgen.py palettes         rewrite only the themes' theme.json
   python3 tools/artgen.py preview cosmos   one quick 960x540 still per mood, into
                                            $ARTGEN_OUT (or the system's temp folder)
@@ -129,7 +130,9 @@ TOPICS = {
     "flux": {"name": "Flux", "keys": ["#ff6b6b", "#ffd166", "#18d1a0", "#4d96ff"], "scene": "flow",
              "about": "Four colours flowing into each other: ribbons and soft light."},
     "aequalyn": {"name": "Aequalyn", "keys": ["#24434a", "#4fc1b0", "#6fb7d8"], "scene": "brand",
-                 "about": "The Aequalyn mark, or its name, in its own teal, with soft light and slow ripples."},
+                 "about": "The Aequalyn mark, or its name, in its own teal, with soft light and slow ripples.",
+                 # a live loop of each picture: the mark (night, day) and the name (dusk, dawn)
+                 "both_live": True},
 }
 
 # standalone wallpapers: not part of any theme
@@ -839,11 +842,23 @@ def topic(tid):
         for i, mood in enumerate(moods, start=1):
             print("  %s: %s" % (theme_id, mood), flush=True)
             still(t["scene"], t["keys"], mood, seed + i * 101, os.path.join(bg, "%d-%s-%s.jpg" % (i, mood, tid)))
-        print("  %s: live" % theme_id, flush=True)
-        live(t["scene"], t["keys"], moods[0], seed + 101, os.path.join(bg, "3-live-%s-%s.mp4" % (moods[0], tid)))
+        lives(tid, variant)
         run(["magick", os.path.join(bg, "1-%s-%s.jpg" % (moods[0], tid)), "-resize", "960x540^", "-gravity", "center",
              "-extent", "960x540", "-quality", "85", os.path.join(d, "preview.jpg")])
     write_meta(tid)
+
+
+def lives(tid, variant):
+    """a theme's live loops: of its first picture, and of its second too when the topic
+    asks for both (the brand's mark and name), each with its still's seed"""
+    t = TOPICS[tid]
+    theme_id = tid if variant == "dark" else tid + "-day"
+    bg = os.path.join(ROOT, "themes", theme_id, "backgrounds")
+    moods = ("night", "dusk") if variant == "dark" else ("day", "dawn")
+    seed = sum(map(ord, tid)) * 7
+    for i, mood in enumerate(moods[:2 if t.get("both_live") else 1], start=1):
+        print("  %s: live %s" % (theme_id, mood), flush=True)
+        live(t["scene"], t["keys"], mood, seed + i * 101, os.path.join(bg, "%d-live-%s-%s.mp4" % (i + 2, mood, tid)))
 
 
 def write_meta(tid):
@@ -899,6 +914,10 @@ def main():
     elif a[0] == "theme":
         for tid in a[1:]:
             topic(tid)
+    elif a[0] == "live":
+        for tid in a[1:]:
+            for variant in ("dark", "light"):
+                lives(tid, variant)
     elif a[0] == "palettes":
         for tid in (a[1:] or TOPICS):
             write_meta(tid)

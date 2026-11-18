@@ -21,9 +21,10 @@ so the time-of-day wallpaper mode finds them) and a 1080p live loop.
 | ![](themes/cosmos-day/preview.jpg) **Cosmos Day** | ![](themes/canopy-day/preview.jpg) **Canopy Day** | ![](themes/abyss-day/preview.jpg) **Abyss Day** | ![](themes/summit-day/preview.jpg) **Summit Day** |
 | ![](themes/dune-day/preview.jpg) **Dune Day** | ![](themes/polar-day/preview.jpg) **Polar Day** | ![](themes/metro-day/preview.jpg) **Metro Day** | ![](themes/flux-day/preview.jpg) **Flux Day** |
 
-**Aequalyn** and **Aequalyn Day** carry the Aequalyn mark (night and day, and the live
-loops) or its name (dusk and dawn), never both, from `tools/brand/`, in the project's own
-teal, over soft light, ripples and flowing ribbons.
+**Aequalyn** and **Aequalyn Day** carry the Aequalyn mark (night and day) or its name
+(dusk and dawn), never both, from `tools/brand/`, in the project's own teal, over soft
+light, ripples and flowing ribbons. Each picture has a live loop too: four stills and
+four loops in all.
 
 | | |
 | --- | --- |
