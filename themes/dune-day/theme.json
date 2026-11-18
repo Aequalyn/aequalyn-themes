@@ -1,0 +1,27 @@
+{
+  "name": "Dune Day",
+  "family": "Aequalyn Nature",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "Dunes in three colours, their shadow sides deep, a low sun.",
+  "colors": [
+    "#eaa76a",
+    "#c4543f",
+    "#5e3c72"
+  ],
+  "palette": {
+    "bgBase": "#f7f3f0",
+    "bgSurface": "#f2ece6",
+    "bgHover": "#ece4dc",
+    "bgSelected": "#e6d5c7",
+    "bgBorder": "#ddd1c6",
+    "textPrimary": "#352c2b",
+    "textSecondary": "#564f4d",
+    "textMuted": "#8c8683",
+    "accentPrimary": "#b74c38",
+    "accentCyan": "#5e3c72",
+    "accentGreen": "#963fc4",
+    "accentOrange": "#3c4172",
+    "accentRed": "#c8323e"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Dune",
+  "family": "Aequalyn Nature",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "Dunes in three colours, their shadow sides deep, a low sun.",
+  "colors": [
+    "#eaa76a",
+    "#c4543f",
+    "#5e3c72"
+  ],
+  "palette": {
+    "bgBase": "#18130e",
+    "bgSurface": "#221a14",
+    "bgHover": "#2b2219",
+    "bgSelected": "#443222",
+    "bgBorder": "#3b3026",
+    "textPrimary": "#ece7e7",
+    "textSecondary": "#b1acaa",
+    "textMuted": "#777270",
+    "accentPrimary": "#c9624f",
+    "accentCyan": "#986cb2",
+    "accentGreen": "#a75ece",
+    "accentOrange": "#7379b5",
+    "accentRed": "#ef6b73"
+  }
+}
