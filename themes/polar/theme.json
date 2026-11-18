@@ -1,0 +1,27 @@
+{
+  "name": "Polar",
+  "family": "Aequalyn Nature",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The northern lights over snow, green to violet.",
+  "colors": [
+    "#3fe08f",
+    "#2bb6cc",
+    "#9d6cf2"
+  ],
+  "palette": {
+    "bgBase": "#0e1813",
+    "bgSurface": "#14221b",
+    "bgHover": "#192b22",
+    "bgSelected": "#224433",
+    "bgBorder": "#263b30",
+    "textPrimary": "#e2eae9",
+    "textSecondary": "#a7afad",
+    "textMuted": "#6d7673",
+    "accentPrimary": "#2bb6cc",
+    "accentCyan": "#9d6cf2",
+    "accentGreen": "#66cc2b",
+    "accentOrange": "#6c9bf2",
+    "accentRed": "#ef6b73"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Polar Day",
+  "family": "Aequalyn Nature",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The northern lights over snow, green to violet.",
+  "colors": [
+    "#3fe08f",
+    "#2bb6cc",
+    "#9d6cf2"
+  ],
+  "palette": {
+    "bgBase": "#f0f7f4",
+    "bgSurface": "#e6f2ec",
+    "bgHover": "#dcece4",
+    "bgSelected": "#c7e6d6",
+    "bgBorder": "#c6ddd1",
+    "textPrimary": "#20332f",
+    "textSecondary": "#465350",
+    "textMuted": "#7d8b88",
+    "accentPrimary": "#1d7a89",
+    "accentCyan": "#8447ef",
+    "accentGreen": "#3c7819",
+    "accentOrange": "#2168eb",
+    "accentRed": "#c8323e"
+  }
+}
