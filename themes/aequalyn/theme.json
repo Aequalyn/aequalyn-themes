@@ -22,6 +22,7 @@
     "accentCyan": "#6fb7d8",
     "accentGreen": "#99c14f",
     "accentOrange": "#6fd8ad",
-    "accentRed": "#ef6b73"
+    "accentRed": "#ef6b73",
+    "borderColors": ["#4fc1b0", "#6fb7d8"]
   }
 }
