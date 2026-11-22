@@ -75,3 +75,9 @@ aequalyn-themes set <id>
 
 User themes go in `~/.config/aequalyn/themes/` and override shipped ones with the same id.
 The wallpapers of their own are installed to `~/.local/share/aequalyn/wallpapers/`.
+
+## Documentation
+
+- `SECURITY.md` — security model and concerns.
+- `SKILL.md` — development/install skill reference.
+- `THEMES.md` — theme format and usage.
