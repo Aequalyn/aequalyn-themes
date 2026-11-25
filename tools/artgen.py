@@ -168,6 +168,13 @@ GRADIENTS = [
     ("harvest", ["#f0c255", "#e0803c", "#b04a72"]),
     ("opal", ["#a8f0e0", "#c7b8ff", "#ffc2d9"]),
     ("zephyr", ["#d2f27a", "#5fd6c0", "#6aa6ff"]),
+    # metals and stones: the tone, its shade and its shine
+    ("gold", ["#f2c53d", "#b8860b", "#ffe9a3"]),
+    ("silver", ["#b9c4d2", "#7f8b9c", "#e4e8ee"]),
+    ("bronze", ["#d08a52", "#8f5427", "#f2c9a0"]),
+    ("ruby", ["#f0325f", "#a30d38", "#ff5f7e"]),
+    ("emerald", ["#1fc777", "#067a4b", "#8ff2bd"]),
+    ("platinum", ["#d9d4c8", "#9c978c", "#eeebe4"]),
 ]
 for _id, _keys in GRADIENTS:
     TOPICS[_id] = {"name": _id.capitalize(), "keys": _keys, "scene": "gradient", "both_live": True,
@@ -249,6 +256,12 @@ def gradient_stops(keys):
     return [from_hsl(h - 0.02, sat, min(0.86, l + 0.16)), keys[0], from_hsl(h + 0.02, sat * 0.85, max(0.40, l - 0.14))]
 
 
+def one_hue(keys):
+    """whether a gradient's colours are the shades of one (a metal, a stone)"""
+    first = to_hsl(keys[0])[0]
+    return len(keys) > 2 and all(abs((to_hsl(c)[0] - first + 0.5) % 1 - 0.5) < 0.04 for c in keys)
+
+
 def gradient_palette(keys, variant):
     """the drawn themes' surfaces and text, with the gradient's own colours as accents;
     green and red stay green and red, so a terminal's colours keep their meaning"""
@@ -257,8 +270,9 @@ def gradient_palette(keys, variant):
     base = p["bgBase"]
     second = stops[-1] if len(keys) > 1 else stops[0]
     # the middle colour, unless it is nearly the red: a warning must not look like an error
+    # (nor like everything else, when all the colours are shades of one)
     h, _, _ = to_hsl(stops[1])
-    third = stops[1] if len(keys) > 2 and 0.04 < h < 0.92 else mix("#e8a24a", keys[0], 0.2)
+    third = stops[1] if len(keys) > 2 and 0.04 < h < 0.92 and not one_hue(keys) else mix("#e8a24a", keys[0], 0.2)
     for key, col in (("accentPrimary", keys[0]), ("accentCyan", second), ("accentGreen", mix("#6fc46a", keys[0], 0.12)),
                      ("accentOrange", third)):
         p[key] = readable(col, base, 4.5)
@@ -831,6 +845,13 @@ def scene_gradient(keys, mood, seed, w, h):
     # the ink's colours stand clear of the ground they are on
     behind = ground[0] if len(keys) == 1 else max(ground, key=lum) if night else min(ground, key=lum)
     ink = [readable(mix(c, "#ffffff", 0.12) if night else mix(c, "#2a2f3c", 0.22), behind, 5 if night else 3.4) for c in stops]
+    if one_hue(keys):
+        # shades of one colour end up alike when they are all brought clear of the ground:
+        # full colours at night, and by day the shade deeper than the rest
+        if night:
+            ink = [readable(c, behind, 3.4) for c in stops]
+        else:
+            ink[1] = mix(ink[1], "#14161c", 0.36)
 
     def logo_into(svg, colors):
         if with_mark:
