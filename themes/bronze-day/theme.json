@@ -1,0 +1,32 @@
+{
+  "name": "Bronze Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of three colours.",
+  "colors": [
+    "#d08a52",
+    "#8f5427",
+    "#f2c9a0"
+  ],
+  "palette": {
+    "bgBase": "#f7f3f0",
+    "bgSurface": "#f2ebe6",
+    "bgHover": "#ece3dc",
+    "bgSelected": "#e6d4c7",
+    "bgBorder": "#ddd0c6",
+    "textPrimary": "#322828",
+    "textSecondary": "#585150",
+    "textMuted": "#8a8481",
+    "accentPrimary": "#9c5d2a",
+    "accentCyan": "#a55e17",
+    "accentGreen": "#437633",
+    "accentOrange": "#9c5f18",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#c97a3a",
+      "#8f5427",
+      "#c9721c"
+    ]
+  }
+}

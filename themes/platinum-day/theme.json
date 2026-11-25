@@ -1,0 +1,32 @@
+{
+  "name": "Platinum Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of three colours.",
+  "colors": [
+    "#d9d4c8",
+    "#9c978c",
+    "#eeebe4"
+  ],
+  "palette": {
+    "bgBase": "#f6f4f1",
+    "bgSurface": "#efede8",
+    "bgHover": "#e9e6df",
+    "bgSelected": "#ded9cf",
+    "bgBorder": "#d9d5c9",
+    "textPrimary": "#2e2c31",
+    "textSecondary": "#4f4e50",
+    "textMuted": "#8a888a",
+    "accentPrimary": "#786d53",
+    "accentCyan": "#7b6e4e",
+    "accentGreen": "#397a32",
+    "accentOrange": "#965f19",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#968868",
+      "#938d81",
+      "#9b8961"
+    ]
+  }
+}

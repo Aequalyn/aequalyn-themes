@@ -1,0 +1,32 @@
+{
+  "name": "Emerald Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of three colours.",
+  "colors": [
+    "#1fc777",
+    "#067a4b",
+    "#8ff2bd"
+  ],
+  "palette": {
+    "bgBase": "#f0f7f4",
+    "bgSurface": "#e6f2ec",
+    "bgHover": "#dcece5",
+    "bgSelected": "#c7e6d7",
+    "bgBorder": "#c6ddd2",
+    "textPrimary": "#1c302c",
+    "textSecondary": "#43514e",
+    "textMuted": "#7b8a86",
+    "accentPrimary": "#14804d",
+    "accentCyan": "#0f7e42",
+    "accentGreen": "#307e36",
+    "accentOrange": "#7f6e2e",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#189b5d",
+      "#067a4b",
+      "#13a255"
+    ]
+  }
+}

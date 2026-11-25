@@ -1,0 +1,32 @@
+{
+  "name": "Ruby",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of three colours.",
+  "colors": [
+    "#f0325f",
+    "#a30d38",
+    "#ff5f7e"
+  ],
+  "palette": {
+    "bgBase": "#180e10",
+    "bgSurface": "#221417",
+    "bgHover": "#2b191e",
+    "bgSelected": "#44222a",
+    "bgBorder": "#3b262b",
+    "textPrimary": "#ece0e6",
+    "textSecondary": "#b1a5aa",
+    "textMuted": "#776c70",
+    "accentPrimary": "#f0325f",
+    "accentCyan": "#ff5f7e",
+    "accentGreen": "#7eb269",
+    "accentOrange": "#ea8c4e",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#f0325f",
+      "#bf0f42",
+      "#ff5f7e"
+    ]
+  }
+}

@@ -32,7 +32,7 @@ four loops in all.
 
 ## Gradients
 
-Thirty more in Aequalyn's manner, each a dark theme and a light one ("Day"): the mark and
+Thirty-six more in Aequalyn's manner, each a dark theme and a light one ("Day"): the mark and
 the name in a gradient of one colour, two or three, over light, ripples and ribbons of the
 same colours. Like Aequalyn's own, each has the mark (night, day) and the name (dusk, dawn)
 as 4K stills, and a live loop of both.
@@ -61,6 +61,13 @@ as 4K stills, and a live loop of both.
 | ![](themes/lotus/preview.jpg) **Lotus** | ![](themes/lotus-day/preview.jpg) **Lotus Day** | ![](themes/mosaic/preview.jpg) **Mosaic** | ![](themes/mosaic-day/preview.jpg) **Mosaic Day** | ![](themes/halcyon/preview.jpg) **Halcyon** | ![](themes/halcyon-day/preview.jpg) **Halcyon Day** |
 | ![](themes/magma/preview.jpg) **Magma** | ![](themes/magma-day/preview.jpg) **Magma Day** | ![](themes/tropic/preview.jpg) **Tropic** | ![](themes/tropic-day/preview.jpg) **Tropic Day** | ![](themes/velvet/preview.jpg) **Velvet** | ![](themes/velvet-day/preview.jpg) **Velvet Day** |
 | ![](themes/harvest/preview.jpg) **Harvest** | ![](themes/harvest-day/preview.jpg) **Harvest Day** | ![](themes/opal/preview.jpg) **Opal** | ![](themes/opal-day/preview.jpg) **Opal Day** | ![](themes/zephyr/preview.jpg) **Zephyr** | ![](themes/zephyr-day/preview.jpg) **Zephyr Day** |
+
+**Metals and stones**
+
+| | | | | | |
+| --- | --- | --- | --- | --- | --- |
+| ![](themes/gold/preview.jpg) **Gold** | ![](themes/gold-day/preview.jpg) **Gold Day** | ![](themes/silver/preview.jpg) **Silver** | ![](themes/silver-day/preview.jpg) **Silver Day** | ![](themes/bronze/preview.jpg) **Bronze** | ![](themes/bronze-day/preview.jpg) **Bronze Day** |
+| ![](themes/ruby/preview.jpg) **Ruby** | ![](themes/ruby-day/preview.jpg) **Ruby Day** | ![](themes/emerald/preview.jpg) **Emerald** | ![](themes/emerald-day/preview.jpg) **Emerald Day** | ![](themes/platinum/preview.jpg) **Platinum** | ![](themes/platinum-day/preview.jpg) **Platinum Day** |
 
 ## Ported
 

@@ -1,0 +1,32 @@
+{
+  "name": "Bronze",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of three colours.",
+  "colors": [
+    "#d08a52",
+    "#8f5427",
+    "#f2c9a0"
+  ],
+  "palette": {
+    "bgBase": "#18130e",
+    "bgSurface": "#221a14",
+    "bgHover": "#2b2119",
+    "bgSelected": "#443122",
+    "bgBorder": "#3b2f26",
+    "textPrimary": "#eae5e6",
+    "textSecondary": "#afaaaa",
+    "textMuted": "#76716f",
+    "accentPrimary": "#d08a52",
+    "accentCyan": "#f2c9a0",
+    "accentGreen": "#7bbd67",
+    "accentOrange": "#e39d4c",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#d08a52",
+      "#8f5427",
+      "#f2c9a0"
+    ]
+  }
+}
