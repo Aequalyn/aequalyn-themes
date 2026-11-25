@@ -8,7 +8,7 @@ description: Themes for Aequalyn: palette + backgrounds, artgen generator, insta
 ## Overview
 
 Themes for Aequalyn. Each theme is a palette plus backgrounds that belong to it.
-97 themes under `themes/`, 10 standalone wallpapers under `wallpapers/`, one generator
+96 themes under `themes/`, 10 standalone wallpapers under `wallpapers/`, one generator
 `tools/artgen.py`, brand assets in `tools/brand/`.
 
 ## Themes
@@ -27,8 +27,6 @@ Themes for Aequalyn. Each theme is a palette plus backgrounds that belong to it.
   accents and `borderColors`; green and red stay green and red.
 - **Handcrafted single-variant themes (5):** Basalt, Ember, Lumen (dark); Meadow (light);
   Tidal (dark). Two 4K stills each, no live loops, family "Aequalyn".
-- **Ported (1):** Spectral by qempexe — neon spectrum on near-black, 6 stills + 2 live
-  loops, `borderColors` six-colour gradient.
 - **Pack (1):** Nocturne — 3 stills, no palette; colours come from the showing background.
 
 ## Format

@@ -69,12 +69,6 @@ as 4K stills, and a live loop of both.
 | ![](themes/gold/preview.jpg) **Gold** | ![](themes/gold-day/preview.jpg) **Gold Day** | ![](themes/silver/preview.jpg) **Silver** | ![](themes/silver-day/preview.jpg) **Silver Day** | ![](themes/bronze/preview.jpg) **Bronze** | ![](themes/bronze-day/preview.jpg) **Bronze Day** |
 | ![](themes/ruby/preview.jpg) **Ruby** | ![](themes/ruby-day/preview.jpg) **Ruby Day** | ![](themes/emerald/preview.jpg) **Emerald** | ![](themes/emerald-day/preview.jpg) **Emerald Day** | ![](themes/platinum/preview.jpg) **Platinum** | ![](themes/platinum-day/preview.jpg) **Platinum Day** |
 
-## Ported
-
-| |
-| --- |
-| ![](themes/spectral/preview.jpg) **Spectral** by qempexe · the full neon spectrum on a near-black base, six 4K stills and two live loops |
-
 `wallpapers/` holds wallpapers of their own, not part of any theme: stills at 4K and
 two live loops. They show in every wallpaper picker.
 
@@ -98,7 +92,7 @@ themes/<id>/
 `palette` uses the shell's keys: `bgBase bgSurface bgHover bgSelected bgBorder
 textPrimary textSecondary textMuted accentPrimary accentCyan accentGreen
 accentOrange accentRed`. It may also carry `borderColors`, two or more colours the
-window borders run through (Spectral's six-colour gradient); without it they run from
+window borders run through (the gradients' own colours); without it they run from
 `accentPrimary` to `accentCyan`.
 
 Leave `palette` out and the theme is a **pack**: it brings backgrounds and
