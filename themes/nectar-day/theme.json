@@ -1,0 +1,30 @@
+{
+  "name": "Nectar Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#ffc06b",
+    "#ff7d9c"
+  ],
+  "palette": {
+    "bgBase": "#f7f4f0",
+    "bgSurface": "#f2ede6",
+    "bgHover": "#ece5dc",
+    "bgSelected": "#e6d9c7",
+    "bgBorder": "#ddd3c6",
+    "textPrimary": "#312a27",
+    "textSecondary": "#57514e",
+    "textMuted": "#8d8883",
+    "accentPrimary": "#9e5b00",
+    "accentCyan": "#d90034",
+    "accentGreen": "#427930",
+    "accentOrange": "#9f6010",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#c77200",
+      "#ff406d"
+    ]
+  }
+}

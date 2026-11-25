@@ -1,0 +1,29 @@
+{
+  "name": "Coral",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of one colour.",
+  "colors": [
+    "#ff7a66"
+  ],
+  "palette": {
+    "bgBase": "#180f0e",
+    "bgSurface": "#221614",
+    "bgHover": "#2b1c19",
+    "bgSelected": "#442622",
+    "bgBorder": "#3b2926",
+    "textPrimary": "#ede4e7",
+    "textSecondary": "#b1a8aa",
+    "textMuted": "#786f70",
+    "accentPrimary": "#ff7a66",
+    "accentCyan": "#ffb8b8",
+    "accentGreen": "#80bb6a",
+    "accentOrange": "#ed9a50",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#ffb8b8",
+      "#ee5f2f"
+    ]
+  }
+}

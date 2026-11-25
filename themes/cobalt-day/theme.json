@@ -1,0 +1,29 @@
+{
+  "name": "Cobalt Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of one colour.",
+  "colors": [
+    "#4c7dff"
+  ],
+  "palette": {
+    "bgBase": "#f0f2f7",
+    "bgSurface": "#e6e9f2",
+    "bgHover": "#dce1ec",
+    "bgSelected": "#c7cfe6",
+    "bgBorder": "#c6ccdd",
+    "textPrimary": "#22273d",
+    "textSecondary": "#4d5161",
+    "textMuted": "#7e8191",
+    "accentPrimary": "#235fff",
+    "accentCyan": "#0062fa",
+    "accentGreen": "#367644",
+    "accentOrange": "#916336",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#3886ff",
+      "#1738ec"
+    ]
+  }
+}

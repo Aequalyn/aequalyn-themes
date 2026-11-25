@@ -1,0 +1,30 @@
+{
+  "name": "Twilight Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#7b5cff",
+    "#ff7eb6"
+  ],
+  "palette": {
+    "bgBase": "#f1f0f7",
+    "bgSurface": "#e8e6f2",
+    "bgHover": "#dfdcec",
+    "bgSelected": "#cdc7e6",
+    "bgBorder": "#cac6dd",
+    "textPrimary": "#27233d",
+    "textSecondary": "#514d61",
+    "textMuted": "#817f91",
+    "accentPrimary": "#6a48ff",
+    "accentCyan": "#d0005a",
+    "accentGreen": "#3a7443",
+    "accentOrange": "#9f5b31",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#7b5cff",
+      "#ff2c88"
+    ]
+  }
+}

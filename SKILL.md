@@ -8,7 +8,7 @@ description: Themes for Aequalyn: palette + backgrounds, artgen generator, insta
 ## Overview
 
 Themes for Aequalyn. Each theme is a palette plus backgrounds that belong to it.
-25 themes under `themes/`, 10 standalone wallpapers under `wallpapers/`, one generator
+85 themes under `themes/`, 10 standalone wallpapers under `wallpapers/`, one generator
 `tools/artgen.py`, brand assets in `tools/brand/`.
 
 ## Themes
@@ -20,6 +20,11 @@ Themes for Aequalyn. Each theme is a palette plus backgrounds that belong to it.
   `1-day-<id>.jpg`, `2-dawn-<id>.jpg`, `3-live-day-<id>.mp4`. Scenes: cosmos, forest,
   ocean, peaks, desert, aurora, city, flow, brand. Family = "Aequalyn Nature" except
   Flux/Metro/Aequalyn = "Aequalyn".
+- **Gradients (30)**, each dark and "Day" = 60 themes, from `GRADIENTS` in artgen: one colour
+  (6), two (12) or three (12). Scene `gradient` (the brand scene with the mark and the name in
+  the gradient); four files each, named as Aequalyn's (`1-night-`, `2-dusk-`, `3-live-night-`,
+  `4-live-dusk-`; Day: day and dawn). `gradient_palette()`: the gradient's colours are the
+  accents and `borderColors`; green and red stay green and red.
 - **Handcrafted single-variant themes (5):** Basalt, Ember, Lumen (dark); Meadow (light);
   Tidal (dark). Two 4K stills each, no live loops, family "Aequalyn".
 - **Ported (1):** Spectral by qempexe — neon spectrum on near-black, 6 stills + 2 live

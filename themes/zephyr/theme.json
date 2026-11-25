@@ -1,0 +1,32 @@
+{
+  "name": "Zephyr",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of three colours.",
+  "colors": [
+    "#d2f27a",
+    "#5fd6c0",
+    "#6aa6ff"
+  ],
+  "palette": {
+    "bgBase": "#16180e",
+    "bgSurface": "#1e2214",
+    "bgHover": "#272b19",
+    "bgSelected": "#3b4422",
+    "bgBorder": "#353b26",
+    "textPrimary": "#eaebe8",
+    "textSecondary": "#afb0ab",
+    "textMuted": "#757770",
+    "accentPrimary": "#d2f27a",
+    "accentCyan": "#6aa6ff",
+    "accentGreen": "#7bca6c",
+    "accentOrange": "#5fd6c0",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#d2f27a",
+      "#5fd6c0",
+      "#6aa6ff"
+    ]
+  }
+}

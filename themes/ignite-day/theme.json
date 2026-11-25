@@ -1,0 +1,30 @@
+{
+  "name": "Ignite Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#ffb238",
+    "#ff4e50"
+  ],
+  "palette": {
+    "bgBase": "#f7f4f0",
+    "bgSurface": "#f2ede6",
+    "bgHover": "#ece6dc",
+    "bgSelected": "#e6dac7",
+    "bgBorder": "#ddd4c6",
+    "textPrimary": "#372d25",
+    "textSecondary": "#56504a",
+    "textMuted": "#8d867f",
+    "accentPrimary": "#9e6100",
+    "accentCyan": "#dd0002",
+    "accentGreen": "#477b30",
+    "accentOrange": "#9f610f",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#c77a00",
+      "#ff4446"
+    ]
+  }
+}

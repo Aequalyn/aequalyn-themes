@@ -1,0 +1,32 @@
+{
+  "name": "Tropic",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of three colours.",
+  "colors": [
+    "#b8f04a",
+    "#1fd0a6",
+    "#2a8cff"
+  ],
+  "palette": {
+    "bgBase": "#15180e",
+    "bgSurface": "#1d2214",
+    "bgHover": "#252b19",
+    "bgSelected": "#394422",
+    "bgBorder": "#343b26",
+    "textPrimary": "#e9ebe5",
+    "textSecondary": "#aeb0a9",
+    "textMuted": "#74776f",
+    "accentPrimary": "#b8f04a",
+    "accentCyan": "#2a8cff",
+    "accentGreen": "#78c966",
+    "accentOrange": "#1fd0a6",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#b8f04a",
+      "#1fd0a6",
+      "#2a8cff"
+    ]
+  }
+}

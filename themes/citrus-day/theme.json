@@ -1,0 +1,30 @@
+{
+  "name": "Citrus Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#ffe259",
+    "#ff9a3d"
+  ],
+  "palette": {
+    "bgBase": "#f7f6f0",
+    "bgSurface": "#f2f0e6",
+    "bgHover": "#ece9dc",
+    "bgSelected": "#e6e0c7",
+    "bgBorder": "#ddd9c6",
+    "textPrimary": "#312e25",
+    "textSecondary": "#514f48",
+    "textMuted": "#88857c",
+    "accentPrimary": "#826b00",
+    "accentCyan": "#ad5300",
+    "accentGreen": "#427e2e",
+    "accentOrange": "#9b6510",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#a08400",
+      "#e06b00"
+    ]
+  }
+}

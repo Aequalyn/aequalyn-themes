@@ -1,0 +1,30 @@
+{
+  "name": "Nectar",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#ffc06b",
+    "#ff7d9c"
+  ],
+  "palette": {
+    "bgBase": "#18140e",
+    "bgSurface": "#221c14",
+    "bgHover": "#2b2419",
+    "bgSelected": "#443622",
+    "bgBorder": "#3b3226",
+    "textPrimary": "#ede8e7",
+    "textSecondary": "#b1adaa",
+    "textMuted": "#787370",
+    "accentPrimary": "#ffc06b",
+    "accentCyan": "#ff7d9c",
+    "accentGreen": "#80c46a",
+    "accentOrange": "#eda851",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#ffc06b",
+      "#ff7d9c"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Lotus",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of three colours.",
+  "colors": [
+    "#ff9ac9",
+    "#c08bff",
+    "#7fc4ff"
+  ],
+  "palette": {
+    "bgBase": "#180e13",
+    "bgSurface": "#22141a",
+    "bgHover": "#2b1922",
+    "bgSelected": "#442232",
+    "bgBorder": "#3b2630",
+    "textPrimary": "#ede6ed",
+    "textSecondary": "#b1aab0",
+    "textMuted": "#786f75",
+    "accentPrimary": "#ff9ac9",
+    "accentCyan": "#7fc4ff",
+    "accentGreen": "#80bf75",
+    "accentOrange": "#c08bff",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#ff9ac9",
+      "#c08bff",
+      "#7fc4ff"
+    ]
+  }
+}

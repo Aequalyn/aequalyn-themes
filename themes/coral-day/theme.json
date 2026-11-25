@@ -1,0 +1,29 @@
+{
+  "name": "Coral Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of one colour.",
+  "colors": [
+    "#ff7a66"
+  ],
+  "palette": {
+    "bgBase": "#f7f1f0",
+    "bgSurface": "#f2e8e6",
+    "bgHover": "#ecdedc",
+    "bgSelected": "#e6cbc7",
+    "bgBorder": "#ddc9c6",
+    "textPrimary": "#37262a",
+    "textSecondary": "#574b4d",
+    "textMuted": "#8d8182",
+    "accentPrimary": "#d61c00",
+    "accentCyan": "#d70000",
+    "accentGreen": "#477535",
+    "accentOrange": "#a75811",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#ff3e3e",
+      "#ed5826"
+    ]
+  }
+}

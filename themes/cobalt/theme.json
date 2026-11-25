@@ -1,0 +1,29 @@
+{
+  "name": "Cobalt",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of one colour.",
+  "colors": [
+    "#4c7dff"
+  ],
+  "palette": {
+    "bgBase": "#0e1118",
+    "bgSurface": "#141822",
+    "bgHover": "#191e2b",
+    "bgSelected": "#222b44",
+    "bgBorder": "#262c3b",
+    "textPrimary": "#e2e4f0",
+    "textSecondary": "#a7a9b4",
+    "textMuted": "#6d7079",
+    "accentPrimary": "#4c7dff",
+    "accentCyan": "#9ec4ff",
+    "accentGreen": "#6bbb7c",
+    "accentOrange": "#c99b6e",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#9ec4ff",
+      "#3350ee"
+    ]
+  }
+}

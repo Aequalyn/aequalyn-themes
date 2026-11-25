@@ -1,0 +1,32 @@
+{
+  "name": "Velvet Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of three colours.",
+  "colors": [
+    "#ff6fa8",
+    "#a44fe0",
+    "#5a57f0"
+  ],
+  "palette": {
+    "bgBase": "#f7f0f3",
+    "bgSurface": "#f2e6eb",
+    "bgHover": "#ecdce3",
+    "bgSelected": "#e6c7d3",
+    "bgBorder": "#ddc6cf",
+    "textPrimary": "#372532",
+    "textSecondary": "#564a52",
+    "textMuted": "#8d7f88",
+    "accentPrimary": "#d50054",
+    "accentCyan": "#5a57f0",
+    "accentGreen": "#46773a",
+    "accentOrange": "#9b3edd",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#ff3283",
+      "#a44fe0",
+      "#5a57f0"
+    ]
+  }
+}

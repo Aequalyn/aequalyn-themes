@@ -1,0 +1,30 @@
+{
+  "name": "Ignite",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#ffb238",
+    "#ff4e50"
+  ],
+  "palette": {
+    "bgBase": "#18140e",
+    "bgSurface": "#221c14",
+    "bgHover": "#2b2419",
+    "bgSelected": "#443722",
+    "bgBorder": "#3b3326",
+    "textPrimary": "#ede8e4",
+    "textSecondary": "#b1ada8",
+    "textMuted": "#78736e",
+    "accentPrimary": "#ffb238",
+    "accentCyan": "#ff4e50",
+    "accentGreen": "#80c264",
+    "accentOrange": "#eda546",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#ffb238",
+      "#ff4e50"
+    ]
+  }
+}

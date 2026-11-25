@@ -1,0 +1,29 @@
+{
+  "name": "Orchid Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of one colour.",
+  "colors": [
+    "#c56cf0"
+  ],
+  "palette": {
+    "bgBase": "#f5f0f7",
+    "bgSurface": "#eee6f2",
+    "bgHover": "#e7dcec",
+    "bgSelected": "#dcc7e6",
+    "bgBorder": "#d5c6dd",
+    "textPrimary": "#30253b",
+    "textSecondary": "#524a59",
+    "textMuted": "#887f8f",
+    "accentPrimary": "#a822e8",
+    "accentCyan": "#9834ec",
+    "accentGreen": "#3f7940",
+    "accentOrange": "#a65322",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#b062f0",
+      "#ba39db"
+    ]
+  }
+}

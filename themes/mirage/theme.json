@@ -1,0 +1,30 @@
+{
+  "name": "Mirage",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#ff8a5c",
+    "#ff4f9a"
+  ],
+  "palette": {
+    "bgBase": "#18110e",
+    "bgSurface": "#221814",
+    "bgHover": "#2b1f19",
+    "bgSelected": "#442b22",
+    "bgBorder": "#3b2c26",
+    "textPrimary": "#ede5e6",
+    "textSecondary": "#b1aaaa",
+    "textMuted": "#78706f",
+    "accentPrimary": "#ff8a5c",
+    "accentCyan": "#ff4f9a",
+    "accentGreen": "#80bd68",
+    "accentOrange": "#ed9d4e",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#ff8a5c",
+      "#ff4f9a"
+    ]
+  }
+}

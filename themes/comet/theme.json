@@ -1,0 +1,30 @@
+{
+  "name": "Comet",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#7df0ff",
+    "#b06cff"
+  ],
+  "palette": {
+    "bgBase": "#0e1718",
+    "bgSurface": "#142022",
+    "bgHover": "#19292b",
+    "bgSelected": "#224044",
+    "bgBorder": "#26393b",
+    "textPrimary": "#e5ebf0",
+    "textSecondary": "#a9b0b4",
+    "textMuted": "#6f7679",
+    "accentPrimary": "#7df0ff",
+    "accentCyan": "#b06cff",
+    "accentGreen": "#71c97c",
+    "accentOrange": "#d3b26e",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#7df0ff",
+      "#b06cff"
+    ]
+  }
+}

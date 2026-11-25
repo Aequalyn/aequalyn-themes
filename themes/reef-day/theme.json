@@ -1,0 +1,30 @@
+{
+  "name": "Reef Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#18d1c4",
+    "#3f7bff"
+  ],
+  "palette": {
+    "bgBase": "#f0f7f6",
+    "bgSurface": "#e6f2f1",
+    "bgHover": "#dceceb",
+    "bgSelected": "#c7e6e4",
+    "bgBorder": "#c6dddb",
+    "textPrimary": "#1c3135",
+    "textSecondary": "#435254",
+    "textMuted": "#7b8a8d",
+    "accentPrimary": "#0d766e",
+    "accentCyan": "#165fff",
+    "accentGreen": "#2d793a",
+    "accentOrange": "#7c6d33",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#129a91",
+      "#3f7bff"
+    ]
+  }
+}

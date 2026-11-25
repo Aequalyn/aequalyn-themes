@@ -1,0 +1,30 @@
+{
+  "name": "Fjord",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#5ad1ff",
+    "#5a67f2"
+  ],
+  "palette": {
+    "bgBase": "#0e1518",
+    "bgSurface": "#141e22",
+    "bgHover": "#19262b",
+    "bgSelected": "#223b44",
+    "bgBorder": "#26353b",
+    "textPrimary": "#e3e9f0",
+    "textSecondary": "#a7aeb4",
+    "textMuted": "#6e7479",
+    "accentPrimary": "#5ad1ff",
+    "accentCyan": "#6370f3",
+    "accentGreen": "#6cc67c",
+    "accentOrange": "#ccab6e",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#5ad1ff",
+      "#5a67f2"
+    ]
+  }
+}

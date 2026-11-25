@@ -1,0 +1,30 @@
+{
+  "name": "Rosewood",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#f0627f",
+    "#8a4fd0"
+  ],
+  "palette": {
+    "bgBase": "#180e10",
+    "bgSurface": "#221417",
+    "bgHover": "#2b191d",
+    "bgSelected": "#442229",
+    "bgBorder": "#3b262a",
+    "textPrimary": "#ece3e8",
+    "textSecondary": "#b1a7ac",
+    "textMuted": "#776e71",
+    "accentPrimary": "#f0627f",
+    "accentCyan": "#9a67d6",
+    "accentGreen": "#7eb86d",
+    "accentOrange": "#ea9555",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#f0627f",
+      "#8a4fd0"
+    ]
+  }
+}

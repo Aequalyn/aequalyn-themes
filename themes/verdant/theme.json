@@ -1,0 +1,30 @@
+{
+  "name": "Verdant",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#3ddc97",
+    "#18a0c4"
+  ],
+  "palette": {
+    "bgBase": "#0e1814",
+    "bgSurface": "#14221c",
+    "bgHover": "#192b24",
+    "bgSelected": "#224435",
+    "bgBorder": "#263b32",
+    "textPrimary": "#e2eaea",
+    "textSecondary": "#a7afae",
+    "textMuted": "#6d7674",
+    "accentPrimary": "#3ddc97",
+    "accentCyan": "#18a0c4",
+    "accentGreen": "#69c76f",
+    "accentOrange": "#c6ae59",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#3ddc97",
+      "#18a0c4"
+    ]
+  }
+}

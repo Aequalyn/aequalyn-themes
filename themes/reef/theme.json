@@ -1,0 +1,30 @@
+{
+  "name": "Reef",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#18d1c4",
+    "#3f7bff"
+  ],
+  "palette": {
+    "bgBase": "#0e1818",
+    "bgSurface": "#142221",
+    "bgHover": "#192b2a",
+    "bgSelected": "#224442",
+    "bgBorder": "#263b3a",
+    "textPrimary": "#dfe9ec",
+    "textSecondary": "#a4aeb1",
+    "textMuted": "#6c7677",
+    "accentPrimary": "#18d1c4",
+    "accentCyan": "#3f7bff",
+    "accentGreen": "#65c675",
+    "accentOrange": "#beab62",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#18d1c4",
+      "#3f7bff"
+    ]
+  }
+}

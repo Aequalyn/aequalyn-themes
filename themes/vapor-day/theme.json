@@ -1,0 +1,30 @@
+{
+  "name": "Vapor Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#ff6ad5",
+    "#6a8bff"
+  ],
+  "palette": {
+    "bgBase": "#f7f0f5",
+    "bgSurface": "#f2e6ee",
+    "bgHover": "#ecdce8",
+    "bgSelected": "#e6c7dd",
+    "bgBorder": "#ddc6d6",
+    "textPrimary": "#372437",
+    "textSecondary": "#564956",
+    "textMuted": "#8d7f8c",
+    "accentPrimary": "#d00095",
+    "accentCyan": "#2d5bff",
+    "accentGreen": "#46783e",
+    "accentOrange": "#b04d15",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#ff18be",
+      "#6083ff"
+    ]
+  }
+}

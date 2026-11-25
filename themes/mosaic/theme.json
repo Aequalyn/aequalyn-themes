@@ -1,0 +1,32 @@
+{
+  "name": "Mosaic",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of three colours.",
+  "colors": [
+    "#18d1a0",
+    "#ffd166",
+    "#ff6b8a"
+  ],
+  "palette": {
+    "bgBase": "#0e1816",
+    "bgSurface": "#14221e",
+    "bgHover": "#192b27",
+    "bgSelected": "#22443b",
+    "bgBorder": "#263b35",
+    "textPrimary": "#dfe9ea",
+    "textSecondary": "#a4aeaf",
+    "textMuted": "#6c7675",
+    "accentPrimary": "#18d1a0",
+    "accentCyan": "#ff6b8a",
+    "accentGreen": "#65c670",
+    "accentOrange": "#ffd166",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#18d1a0",
+      "#ffd166",
+      "#ff6b8a"
+    ]
+  }
+}

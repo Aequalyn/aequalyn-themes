@@ -1,0 +1,29 @@
+{
+  "name": "Amber Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of one colour.",
+  "colors": [
+    "#f5a524"
+  ],
+  "palette": {
+    "bgBase": "#f7f4f0",
+    "bgSurface": "#f2ede6",
+    "bgHover": "#ece6dc",
+    "bgSelected": "#e6dac7",
+    "bgBorder": "#ddd4c6",
+    "textPrimary": "#362c22",
+    "textSecondary": "#554f48",
+    "textMuted": "#8c867e",
+    "accentPrimary": "#986007",
+    "accentCyan": "#ac5907",
+    "accentGreen": "#467830",
+    "accentOrange": "#985e10",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#d36d09",
+      "#a88115"
+    ]
+  }
+}

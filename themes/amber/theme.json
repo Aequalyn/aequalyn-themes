@@ -1,0 +1,29 @@
+{
+  "name": "Amber",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of one colour.",
+  "colors": [
+    "#f5a524"
+  ],
+  "palette": {
+    "bgBase": "#18140e",
+    "bgSurface": "#221c14",
+    "bgHover": "#2b2519",
+    "bgSelected": "#443722",
+    "bgBorder": "#3b3326",
+    "textPrimary": "#ede7e3",
+    "textSecondary": "#b1aca7",
+    "textMuted": "#78736e",
+    "accentPrimary": "#f5a524",
+    "accentCyan": "#f9b572",
+    "accentGreen": "#7fc062",
+    "accentOrange": "#eba342",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#f9b572",
+      "#ba8f17"
+    ]
+  }
+}

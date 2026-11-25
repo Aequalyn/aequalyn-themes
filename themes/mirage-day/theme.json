@@ -1,0 +1,30 @@
+{
+  "name": "Mirage Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#ff8a5c",
+    "#ff4f9a"
+  ],
+  "palette": {
+    "bgBase": "#f7f2f0",
+    "bgSurface": "#f2e9e6",
+    "bgHover": "#ece1dc",
+    "bgSelected": "#e6cfc7",
+    "bgBorder": "#ddccc6",
+    "textPrimary": "#372829",
+    "textSecondary": "#574c4d",
+    "textMuted": "#8d8281",
+    "accentPrimary": "#cc3a00",
+    "accentCyan": "#d4005a",
+    "accentGreen": "#477734",
+    "accentOrange": "#a65b11",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#ff4800",
+      "#ff3b8e"
+    ]
+  }
+}

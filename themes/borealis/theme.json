@@ -1,0 +1,32 @@
+{
+  "name": "Borealis",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "dark",
+  "about": "The Aequalyn mark, or its name, in a gradient of three colours.",
+  "colors": [
+    "#3fe0a0",
+    "#2bb6ff",
+    "#9d6cf2"
+  ],
+  "palette": {
+    "bgBase": "#0e1814",
+    "bgSurface": "#14221c",
+    "bgHover": "#192b24",
+    "bgSelected": "#224437",
+    "bgBorder": "#263b33",
+    "textPrimary": "#e2eaea",
+    "textSecondary": "#a7afae",
+    "textMuted": "#6d7674",
+    "accentPrimary": "#3fe0a0",
+    "accentCyan": "#9d6cf2",
+    "accentGreen": "#69c770",
+    "accentOrange": "#2bb6ff",
+    "accentRed": "#ef6b73",
+    "borderColors": [
+      "#3fe0a0",
+      "#2bb6ff",
+      "#9d6cf2"
+    ]
+  }
+}

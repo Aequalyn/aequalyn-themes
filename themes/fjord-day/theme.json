@@ -1,0 +1,30 @@
+{
+  "name": "Fjord Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of two colours.",
+  "colors": [
+    "#5ad1ff",
+    "#5a67f2"
+  ],
+  "palette": {
+    "bgBase": "#f0f5f7",
+    "bgSurface": "#e6eef2",
+    "bgHover": "#dce8ec",
+    "bgSelected": "#c7dde6",
+    "bgBorder": "#c6d6dd",
+    "textPrimary": "#23313d",
+    "textSecondary": "#48535b",
+    "textMuted": "#7f8991",
+    "accentPrimary": "#0074a1",
+    "accentCyan": "#515ef1",
+    "accentGreen": "#307d3e",
+    "accentOrange": "#86682f",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#0092ca",
+      "#5a67f2"
+    ]
+  }
+}

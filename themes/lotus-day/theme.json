@@ -1,0 +1,32 @@
+{
+  "name": "Lotus Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of three colours.",
+  "colors": [
+    "#ff9ac9",
+    "#c08bff",
+    "#7fc4ff"
+  ],
+  "palette": {
+    "bgBase": "#f7f0f3",
+    "bgSurface": "#f2e6eb",
+    "bgHover": "#ecdce4",
+    "bgSelected": "#e6c7d5",
+    "bgBorder": "#ddc6d0",
+    "textPrimary": "#372a36",
+    "textSecondary": "#574e55",
+    "textMuted": "#8d828a",
+    "accentPrimary": "#d70064",
+    "accentCyan": "#006bc6",
+    "accentGreen": "#417838",
+    "accentOrange": "#8e2fff",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#ff3492",
+      "#aa62ff",
+      "#058cff"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "Mosaic Day",
+  "family": "Aequalyn",
+  "author": "Aequalyn",
+  "variant": "light",
+  "about": "The Aequalyn mark, or its name, in a gradient of three colours.",
+  "colors": [
+    "#18d1a0",
+    "#ffd166",
+    "#ff6b8a"
+  ],
+  "palette": {
+    "bgBase": "#f0f7f5",
+    "bgSurface": "#e6f2ef",
+    "bgHover": "#dcece8",
+    "bgSelected": "#c7e6dd",
+    "bgBorder": "#c6ddd6",
+    "textPrimary": "#1c3131",
+    "textSecondary": "#435151",
+    "textMuted": "#7b8a89",
+    "accentPrimary": "#0f7f61",
+    "accentCyan": "#db002e",
+    "accentGreen": "#2d7936",
+    "accentOrange": "#8f6400",
+    "accentRed": "#c8323e",
+    "borderColors": [
+      "#129a76",
+      "#b88000",
+      "#ff426a"
+    ]
+  }
+}
