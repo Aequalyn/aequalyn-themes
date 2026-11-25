@@ -135,6 +135,45 @@ TOPICS = {
                  "both_live": True},
 }
 
+# the gradients: the Aequalyn mark and name in a gradient of one colour (its own lighter
+# and deeper tones), two or three, on a ground of the same colours
+GRADIENTS = [
+    ("cobalt", ["#4c7dff"]),
+    ("jade", ["#2fc48d"]),
+    ("amber", ["#f5a524"]),
+    ("orchid", ["#c56cf0"]),
+    ("coral", ["#ff7a66"]),
+    ("frost", ["#8ecbf5"]),
+    ("mirage", ["#ff8a5c", "#ff4f9a"]),
+    ("reef", ["#18d1c4", "#3f7bff"]),
+    ("vapor", ["#ff6ad5", "#6a8bff"]),
+    ("orchard", ["#b4e35a", "#2fb673"]),
+    ("ignite", ["#ffb238", "#ff4e50"]),
+    ("twilight", ["#7b5cff", "#ff7eb6"]),
+    ("fjord", ["#5ad1ff", "#5a67f2"]),
+    ("citrus", ["#ffe259", "#ff9a3d"]),
+    ("verdant", ["#3ddc97", "#18a0c4"]),
+    ("rosewood", ["#f0627f", "#8a4fd0"]),
+    ("nectar", ["#ffc06b", "#ff7d9c"]),
+    ("comet", ["#7df0ff", "#b06cff"]),
+    ("borealis", ["#3fe0a0", "#2bb6ff", "#9d6cf2"]),
+    ("carnival", ["#ff4fa3", "#ffb238", "#30d5e0"]),
+    ("solstice", ["#ffd166", "#ff6b6b", "#9b5cff"]),
+    ("lotus", ["#ff9ac9", "#c08bff", "#7fc4ff"]),
+    ("mosaic", ["#18d1a0", "#ffd166", "#ff6b8a"]),
+    ("halcyon", ["#7fe7d0", "#5ab6ff", "#7b78ff"]),
+    ("magma", ["#ffcf5c", "#ff6a3d", "#d63a72"]),
+    ("tropic", ["#b8f04a", "#1fd0a6", "#2a8cff"]),
+    ("velvet", ["#ff6fa8", "#a44fe0", "#5a57f0"]),
+    ("harvest", ["#f0c255", "#e0803c", "#b04a72"]),
+    ("opal", ["#a8f0e0", "#c7b8ff", "#ffc2d9"]),
+    ("zephyr", ["#d2f27a", "#5fd6c0", "#6aa6ff"]),
+]
+for _id, _keys in GRADIENTS:
+    TOPICS[_id] = {"name": _id.capitalize(), "keys": _keys, "scene": "gradient", "both_live": True,
+                   "about": "The Aequalyn mark, or its name, in a gradient of %s."
+                            % ("one colour" if len(_keys) == 1 else "%s colours" % ("two", "three")[len(_keys) - 2])}
+
 # standalone wallpapers: not part of any theme
 WALLS = [
     {"id": "nebula-crimson", "scene": "cosmos", "keys": ["#3a0f2e", "#d6336c", "#ff9f43"], "mood": "night", "seed": 71},
@@ -199,6 +238,31 @@ def palette(keys, variant):
         for key, col in (("accentPrimary", acc), ("accentCyan", cyan), ("accentGreen", green),
                          ("accentOrange", orange), ("accentRed", RED_LIGHT)):
             p[key] = readable(col, base, 4.5)
+    return p
+
+
+def gradient_stops(keys):
+    """a gradient's colours: its keys, or the lighter and deeper tones of its only one"""
+    if len(keys) > 1:
+        return list(keys)
+    h, sat, l = to_hsl(keys[0])
+    return [from_hsl(h - 0.02, sat, min(0.86, l + 0.16)), keys[0], from_hsl(h + 0.02, sat * 0.85, max(0.40, l - 0.14))]
+
+
+def gradient_palette(keys, variant):
+    """the drawn themes' surfaces and text, with the gradient's own colours as accents;
+    green and red stay green and red, so a terminal's colours keep their meaning"""
+    stops = gradient_stops(keys)
+    p = palette([keys[0]], variant)
+    base = p["bgBase"]
+    second = stops[-1] if len(keys) > 1 else stops[0]
+    # the middle colour, unless it is nearly the red: a warning must not look like an error
+    h, _, _ = to_hsl(stops[1])
+    third = stops[1] if len(keys) > 2 and 0.04 < h < 0.92 else mix("#e8a24a", keys[0], 0.2)
+    for key, col in (("accentPrimary", keys[0]), ("accentCyan", second), ("accentGreen", mix("#6fc46a", keys[0], 0.12)),
+                     ("accentOrange", third)):
+        p[key] = readable(col, base, 4.5)
+    p["borderColors"] = [readable(c, base, 3) for c in (stops if len(keys) > 1 else [stops[0], stops[2]])]
     return p
 
 # ---- shapes ----------------------------------------------------------------------------
@@ -731,9 +795,89 @@ def scene_brand(keys, mood, seed, w, h):
     return layers
 
 
+def scene_gradient(keys, mood, seed, w, h):
+    """the brand scene in a gradient: the mark or the name, the ribbons and the light run
+    through the keys from left to right, on a ground that holds all of them"""
+    rng = random.Random(seed)
+    stops = gradient_stops(keys)
+    night = dark(mood)
+    with_mark = mood in ("night", "day")
+    cx, cy = w * 0.5, h * 0.46
+    mh, ww = h * 0.34, w * 0.46
+    n = len(stops)
+    at = [i / (n - 1) for i in range(n)]
+
+    # the ground: the colours from corner to corner, deep at night, pale by day
+    s0 = Svg(w, h)
+    if night:
+        deep = "#040409" if mood == "night" else "#0a0810"
+        ground = [mix(c, deep, 0.83 if mood == "night" else 0.76) for c in stops]
+    else:
+        ground = [mix(c, "#ffffff" if mood == "day" else "#fff7ee", 0.80 if mood == "day" else 0.74) for c in stops]
+    s0.add('<rect width="%d" height="%d" fill="%s"/>' % (w, h, s0.lin([(a, c, 1) for a, c in zip(at, ground)], 0, 0, 1, 1)))
+    vig = s0.rad([(0, "#000000", 0), (0.6, "#000000", 0), (1, "#000000", 0.5 if night else 0.06)], 0.5, 0.5, 0.78)
+    s0.add('<rect width="%d" height="%d" fill="%s"/>' % (w, h, vig))
+    layers = [("base", s0.text(), {})]
+
+    # soft light of each colour, on its own side
+    glow = Svg(w, h)
+    bl = glow.blur(h * 0.12)
+    for a, c in zip(at, stops):
+        x, y = w * (0.14 + 0.72 * a), h * (rng.uniform(0.62, 0.86) if a < 0.5 else rng.uniform(0.14, 0.36))
+        glow.add('<circle cx="%.1f" cy="%.1f" r="%.1f" fill="%s" opacity="%.2f" filter="%s"/>'
+                 % (x, y, h * rng.uniform(0.34, 0.44), c, 0.26 if night else 0.34, bl))
+    layers.append(("glow", glow.text(), {"sway": 36, "period": 12, "pulse": 0.18}))
+
+    # the ink's colours stand clear of the ground they are on
+    behind = ground[0] if len(keys) == 1 else max(ground, key=lum) if night else min(ground, key=lum)
+    ink = [readable(mix(c, "#ffffff", 0.12) if night else mix(c, "#2a2f3c", 0.22), behind, 5 if night else 3.4) for c in stops]
+
+    def logo_into(svg, colors):
+        if with_mark:
+            i = svg.id("m")
+            x0, mw = MARK_BOX[0], MARK_BOX[2]
+            svg.defs.append('<linearGradient id="%s" gradientUnits="userSpaceOnUse" x1="%d" y1="140" x2="%d" y2="284">%s</linearGradient>'
+                            % (i, x0 + 10, x0 + mw - 24, "".join('<stop offset="%.3f" stop-color="%s"/>' % (a, c) for a, c in zip(at, colors))))
+            return mark_svg(cx, cy, mh, "url(#%s)" % i)
+        return word_svg(cx, cy, ww, svg.lin([(a, c, 1) for a, c in zip(at, colors)], 0, 0, 1, 0))
+
+    rcx, rcy, rr = mark_ring(cx, cy, mh) if with_mark else (cx, cy, ww * 0.11)
+    for j in range(2):
+        rings = Svg(w, h)
+        step = rr * 0.62
+        for i in range(1, 15):
+            fade = max(0.0, 1 - i / 14)
+            c = stops[min(n - 1, int(i / 14 * n))]
+            rings.add('<circle cx="%.1f" cy="%.1f" r="%.1f" fill="none" stroke="%s" stroke-width="%.1f" opacity="%.3f"/>'
+                      % (rcx, rcy, rr + step * (i + 0.5 * j), c if night else mix(c, "#000000", 0.35), h * 0.0016,
+                         (0.32 if night else 0.26) * fade))
+        layers.append(("rings%d" % j, rings.text(), {"cross": j}))
+
+    for j in range(2):
+        rib = Svg(w, h)
+        for i in range(6):
+            t = i / 5
+            f = ridge(rng, w, h * (0.80 + 0.10 * t), h * 0.06, 3, 0.8)
+            col = rib.lin([(0, stops[0], 0.0)] + [(0.2 + 0.6 * a, c, 0.85) for a, c in zip(at, stops)] + [(1, stops[-1], 0.0)], 0, 0, 1, 0)
+            d = " ".join("%s%.1f,%.1f" % ("M" if x == -20 else "L", x, f(x)) for x in range(-20, w + 21, 10))
+            rib.add('<path d="%s" fill="none" stroke="%s" stroke-width="%.1f" stroke-linecap="round" opacity="%.2f"/>'
+                    % (d, col, h * rng.uniform(0.0015, 0.005), 0.55 if night else 0.75))
+        layers.append(("ribbons%d" % j, rib.text(), {"sway": 34 + 20 * j, "period": 12, "phase": 0.5 * j, "cross": j}))
+
+    halo = Svg(w, h)
+    hb = halo.blur(h * 0.04)
+    halo.add('<g opacity="%.2f" filter="%s">%s</g>' % (0.42 if night else 0.25, hb, logo_into(halo, stops)))
+    layers.append(("halo", halo.text(), {"pulse": 0.45, "period": 6}))
+
+    logo = Svg(w, h)
+    logo.add(logo_into(logo, ink))
+    layers.append(("logo", logo.text(), {}))
+    return layers
+
+
 SCENES = {"cosmos": scene_cosmos, "forest": scene_forest, "ocean": scene_ocean, "peaks": scene_peaks,
           "desert": scene_desert, "aurora": scene_aurora, "city": scene_city, "flow": scene_flow,
-          "brand": scene_brand}
+          "brand": scene_brand, "gradient": scene_gradient}
 
 # ---- rendering -------------------------------------------------------------------------------
 
@@ -773,7 +917,17 @@ def still(scene, keys, mood, seed, out, w=W4, h=H4):
         run(["magick", flat, "-strip", "-sampling-factor", "4:2:0", "-quality", "90", out])
 
 
-def live(scene, keys, mood, seed, out):
+def filled_rows(png, h):
+    """the rows a layer draws in: the first, and how many"""
+    box = run(["magick", png, "-alpha", "extract", "-format", "%@", "info:"]).strip()
+    try:
+        rows, top = int(box.split("x")[1].split("+")[0]), int(box.split("+")[2])
+    except (IndexError, ValueError):
+        return 0, h
+    return (top, rows) if rows > 0 and 0 <= top and top + rows <= h else (0, h)
+
+
+def live(scene, keys, mood, seed, out, crf=21):
     """the layers in slow seamless motion: an mp4 loop of LIVE_SECONDS"""
     w, h, T = WL, HL, LIVE_SECONDS
     layers = SCENES[scene](keys, mood, seed, w, h)
@@ -783,8 +937,10 @@ def live(scene, keys, mood, seed, out):
         pad = 64
         inputs, chains = [], []
         for i, (p, m) in enumerate(pngs):
-            inputs += ["-loop", "1", "-framerate", str(LIVE_FPS), "-t", str(T), "-i", p]
-        chains.append("[0:v]format=rgba,scale=%d:%d[base]" % (w, h))
+            inputs += ["-threads", "1", "-i", p]
+        # each layer is read and prepared once, then repeated for every frame of the loop
+        repeat = "loop=loop=%d:size=1:start=0,setpts=N/(%d*TB),fps=%d" % (T * LIVE_FPS - 1, LIVE_FPS, LIVE_FPS)
+        chains.append("[0:v]format=rgba,scale=%d:%d,settb=1/%d,%s[base]" % (w, h, LIVE_FPS, repeat))
         prev = "base"
         for i, (p, m) in enumerate(pngs[1:], start=1):
             sway = m.get("sway", 0)
@@ -793,9 +949,12 @@ def live(scene, keys, mood, seed, out):
             # the period divides the loop exactly, so the last frame meets the first
             per = T / max(1, round(T / period)) if period else T
             lbl = "l%d" % i
-            f = ["format=rgba", "pad=%d:%d:%d:0:color=0x00000000" % (w + 2 * pad, h, pad)]
+            # only the rows it has something in
+            top, rows = filled_rows(p, h)
+            f = ["format=rgba", "crop=%d:%d:0:%d" % (w, rows, top), "pad=%d:%d:%d:0:color=0x00000000" % (w + 2 * pad, rows, pad)]
             # the edge columns copied out so the sway never shows an empty strip
             f.append("fillborders=left=%d:right=%d:mode=smear" % (pad, pad))
+            f += ["settb=1/%d" % LIVE_FPS, repeat]
             # its opacity over the loop (pulse, crossfade), sent to a cheap filter frame by
             # frame: a whole-layer value, so no per-pixel work
             a, cross = m.get("pulse", 0), m.get("cross")
@@ -818,12 +977,12 @@ def live(scene, keys, mood, seed, out):
             chains.append("[%d:v]%s[%s]" % (i, ",".join(f), lbl))
             x = "-%d+%.2f*sin(2*PI*(t/%.4f+%.3f))" % (pad, sway * w / 1920, per, ph) if sway else "-%d" % pad
             nxt = "o%d" % i
-            chains.append("[%s][%s]overlay=x='%s':y=0:format=auto:shortest=1[%s]" % (prev, lbl, x, nxt))
+            chains.append("[%s][%s]overlay=x='%s':y=%d:format=auto:shortest=1[%s]" % (prev, lbl, x, top, nxt))
             prev = nxt
         chains.append("[%s]format=yuv420p[out]" % prev)
         cmd = ["ffmpeg", "-nostdin", "-loglevel", "error", "-y"] + inputs + [
             "-filter_complex", ";".join(chains), "-map", "[out]", "-t", str(T), "-r", str(LIVE_FPS),
-            "-c:v", "libx264", "-preset", "slow", "-crf", "21", "-pix_fmt", "yuv420p", "-movflags", "+faststart", out]
+            "-c:v", "libx264", "-preset", "slow", "-crf", str(crf), "-pix_fmt", "yuv420p", "-movflags", "+faststart", out]
         run(cmd)
 
 # ---- what goes where -------------------------------------------------------------------------
@@ -867,12 +1026,12 @@ def write_meta(tid):
         d = os.path.join(ROOT, "themes", tid if variant == "dark" else tid + "-day")
         meta = {
             "name": t["name"] + ("" if variant == "dark" else " Day"),
-            "family": "Aequalyn Nature" if t["scene"] not in ("flow", "city", "brand") else "Aequalyn",
+            "family": "Aequalyn Nature" if t["scene"] not in ("flow", "city", "brand", "gradient") else "Aequalyn",
             "author": "Aequalyn",
             "variant": variant,
             "about": t["about"],
             "colors": t["keys"],
-            "palette": palette(t["keys"], variant),
+            "palette": (gradient_palette if t["scene"] == "gradient" else palette)(t["keys"], variant),
         }
         os.makedirs(d, exist_ok=True)
         with open(os.path.join(d, "theme.json"), "w") as fh:
