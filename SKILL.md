@@ -89,11 +89,11 @@ ones need `mpvpaper` to move; otherwise still.
 
 Themes are data: no scripts, executables or symlinks; no config writes; no absolute
 paths or remote URLs; images sniffed by magic bytes and size-capped. See `SECURITY.md`
-and `aequalyn/Security.md` / `aequalyn-store/SECURITY.md`.
+and `aequalyn/Security.md` / `aequalyn-market`'s guidelines.
 
 ## References
 
 - Aequalyn themes: https://github.com/Aequalyn/aequalyn-themes
 - Aequalyn core: https://github.com/Aequalyn/aequalyn
 - Aequalyn shell: https://github.com/Aequalyn/aequalyn-shell
-- Aequalyn store: https://github.com/Aequalyn/aequalyn-store
+- Aequalyn market: https://github.com/Aequalyn/aequalyn-market

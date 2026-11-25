@@ -53,7 +53,7 @@ Live wallpapers move with `mpvpaper`; without it they show as a still.
 themes/<id>/
 ├── theme.json      name, family, author, variant, palette (and, for drawn ones, about, colors)
 ├── backgrounds/    images or videos, used in name order
-└── preview.jpg     card image in Atelier (optional; defaults to the first background)
+└── preview.jpg     card image in the picker (optional; defaults to the first background)
 ```
 
 `palette` uses the shell's keys: `bgBase bgSurface bgHover bgSelected bgBorder
@@ -73,7 +73,7 @@ aequalyn-themes install <git-url>
 aequalyn-themes set <id>
 ```
 
-User themes go in `~/.config/aequalyn/themes/` and override shipped ones with the same id.
+Others' themes install from the Store, reviewed ([aequalyn-market](https://github.com/Aequalyn/aequalyn-market)). User themes go in `~/.config/aequalyn/themes/` and override shipped ones with the same id.
 The wallpapers of their own are installed to `~/.local/share/aequalyn/wallpapers/`.
 
 ## Documentation

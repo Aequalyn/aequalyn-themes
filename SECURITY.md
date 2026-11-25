@@ -8,4 +8,4 @@
   sources; consider checksums.
 - Path traversal in `aequalyn-themes remove <id>`: validate ids strictly.
 
-See `aequalyn/Security.md` and `aequalyn-store/SECURITY.md`.
+See `aequalyn/Security.md` and `aequalyn-market`'s guidelines.

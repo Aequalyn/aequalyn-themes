@@ -8,7 +8,7 @@ Themes for Aequalyn: a palette plus backgrounds that belong to it.
 themes/<id>/
 ├── theme.json      name, family, author, variant, palette (and optionally about, colors)
 ├── backgrounds/    images or videos, used in name order
-└── preview.jpg     card image in Atelier (optional; defaults to first background)
+└── preview.jpg     card image in the picker (optional; defaults to first background)
 ```
 
 `palette` keys: `bgBase bgSurface bgHover bgSelected bgBorder textPrimary textSecondary
